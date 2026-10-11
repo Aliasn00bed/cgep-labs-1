@@ -19,6 +19,10 @@ The five controls you'll satisfy, translated out of NIST-speak:
 | **AU-3** | There's a record of who accessed the data. | `aws_s3_bucket_logging` writing to the log bucket |
 | **AU-6** | Those records are kept somewhere you can actually review. | the separate log bucket |
 | **CM-6** | The resource is set to an approved configuration, and that's labeled and enforced. | required tags + versioning |
+| *CMU-CSO-CMD| Providers MUST document the cryptographic modules used in each service (or groups of services that use the same modules) where cryptographic services are used to protect federal customer data, including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules.
+| *CMU-CSO-UVM* | Providers with Class C Certifications SHOULD use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.
+| *KSI-CMT-LMC* | Standard logging, changelog, config drift.
+| *KSI-CMT-RMV* | Utilize IAC, Golden Images, and validated verified code repositories for controlled resources. Change management processes and procedures.
 
 You don't need to memorize the control IDs. You need to be able to point at a line of code and say which control it enforces, because that's the muscle every later lab builds on.
 
